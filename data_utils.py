@@ -5,11 +5,9 @@ with open(r'D:\wlgzg\Documents\workshop_\few shot learning\data\Data.pkl','rb') 
     data = pickle.load(f)
 
 train_data_,test_1,test_2 = data[0],data[1],data[2]
-# train_data  只包含0-5训练数据
-# test_1 0-5 测试数据
-# test_2 6-9 测试数据
-# print(len(train_data))
-# print(len(test_1),len(test_2))
+# train_data  [0,6,8,9,5,4]
+# test_1 0-5 测试数据[0,6,8,9,5,4]
+# test_2 6-9 测试数据[1,2,3,7]
 def batch_train_flow(batch_size):
     o_ = list(range(len(train_data_)))
     random.shuffle(o_)
@@ -30,22 +28,7 @@ def batch_test_train():
     return [i[0] for i in train_data_]
 
 def batch_test_same():
-    o_ = list(range(len(test_1)))
-    random.shuffle(o_)
-    # return [i[0] for i in test_1]
-    return [test_1[o][0] for o in o_[:3000]]
+    return [i[0] for i in test_1]
 
 def batch_test_different():
     return [i[0] for i in test_2]
-    # o_ = list(range(len(test_2)))
-    # random.shuffle(o_)
-    # return [test_2[o][0] for o in o_[:2000]]
-
-# if __name__ == "__main__":
-#     oo = itertools.combinations(range(len(train_data)),2)
-#     order = [o for o in oo]
-#     n_batches = len(order) // 150
-#     print(order[3])
-#     print(order[3][1])                                          
-#     print(len(train_data[4]))
-#     train_x_1 = [train_data[i[0]][0] for i in order]
