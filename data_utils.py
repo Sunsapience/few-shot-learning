@@ -1,7 +1,7 @@
 import pickle,random
 import itertools
 
-with open(r'D:\wlgzg\Documents\workshop_\few shot learning\data\Data.pkl','rb') as f:
+with open('./data/Data.pkl','rb') as f:
     data = pickle.load(f)
 
 train_data_,test_1,test_2 = data[0],data[1],data[2]
