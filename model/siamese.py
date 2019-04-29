@@ -81,8 +81,8 @@ class Siamese_net():
 
         ########################################################
         pos = labels_t*tf.square(eucd)
-        neg = labels_f *tf.square(tf.maximum((5 - eucd),0))
+        neg = labels_f *tf.square(tf.maximum((1 - eucd),0))
 
         losses = pos+neg
         loss = tf.reduce_mean(losses, name="loss")
-        return loss
+        return loss 
