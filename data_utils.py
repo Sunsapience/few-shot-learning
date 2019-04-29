@@ -24,11 +24,11 @@ def batch_train_flow(batch_size):
     for j in range(n_batches):
         yield train_x_1[j*batch_size:(j+1)*batch_size],train_x_2[j*batch_size:(j+1)*batch_size],train_y[j*batch_size:(j+1)*batch_size]
 
-def batch_test_train():
+def batch_test_train(): # 训练数据
     return [i[0] for i in train_data_]
 
-def batch_test_same():
+def batch_test_same(): #与训练数据相同类别的测试数据
     return [i[0] for i in test_1]
 
-def batch_test_different():
+def batch_test_different(): #与训练数据不同类别的测试数据
     return [i[0] for i in test_2]
