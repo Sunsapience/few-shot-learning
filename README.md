@@ -17,4 +17,4 @@
 ![](https://github.com/Sunsapience/few-shot-learning/blob/master/show/图片5.png)
   
 ## 参考
-![1] [可视化代码](https://github.com/ywpkwon/siamese_tf_mnist)  
+[1] [可视化代码](https://github.com/ywpkwon/siamese_tf_mnist)  
