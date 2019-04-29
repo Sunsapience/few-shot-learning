@@ -85,4 +85,4 @@ class Siamese_net():
 
         losses = pos+neg
         loss = tf.reduce_mean(losses, name="loss")
-        return loss 
+        return loss  
