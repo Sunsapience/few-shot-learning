@@ -10,4 +10,4 @@
 ![](https://github.com/Sunsapience/few-shot-learning/blob/master/show/图片3.png)  
 ### 测试  
 ![](https://github.com/Sunsapience/few-shot-learning/blob/master/show/图片4.png)
-![](https://github.com/Sunsapience/few-shot-learning/blob/master/show/图片4.png)
+![](https://github.com/Sunsapience/few-shot-learning/blob/master/show/图片5.png)
