@@ -28,9 +28,9 @@ for i in range(10):
     #     if np.argmax(y_2[j])==i:
     #         data['c_'+str(i)].append((x_2[j],i))
 
-d_1 = [] # 训练数据 ,类别 0-5
-d_2 = [] # 测试数据 ,类别 0-5
-d_3 = [] # 测试数据 ,类别 6-9
+d_1 = [] # 训练数据 ,类别 [0,6,8,9,5,4]
+d_2 = [] # 测试数据 ,类别 [0,6,8,9,5,4]
+d_3 = [] # 测试数据 ,类别 [1,2,3,7]
 # l = [len(data['c_'+str(i)]) for i in range(10)]
 # print(l)
 for i in range(10):
