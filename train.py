@@ -8,19 +8,14 @@ siamese = Siamese_net('rnn')
 train_op = tf.train.GradientDescentOptimizer(1e-2).minimize(siamese.loss)
 
 def run_epoch(sess,epoch,Model,data_queue, train_op):
-
-    x1 = Model.x1
-    x2 = Model.x2
-    y_ = Model.y_
-
     steps = 0
 
     feed_dict = {}
     total_loss = 0
     for x_1,x_2,y in data_queue:
-        feed_dict[x1] = x_1
-        feed_dict[x2] = x_2
-        feed_dict[y_] = y
+        feed_dict[Model.x1] = x_1
+        feed_dict[Model.x2] = x_2
+        feed_dict[Model.y_] = y
         output = [train_op,Model.loss]
         _,loss = sess.run(output, feed_dict=feed_dict)       
 
@@ -32,7 +27,7 @@ def run_epoch(sess,epoch,Model,data_queue, train_op):
 
     return round(total_loss/steps,6)
 
-saver = tf.train.Saver(max_to_keep=6)
+saver = tf.train.Saver(max_to_keep=3)
 base_line = 0.01
 with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
